@@ -1,5 +1,4 @@
 import { createAction } from 'redux-act'
-import R from 'ramda'
 import {
   length,
   map,
@@ -9,11 +8,11 @@ import {
 } from 'ramda'
 
 export function createActions (x) {
-  if (R.length(x) === 1) return applyTypes(x)
-  return R.map(applyTypes, x)
+  if (length(x) === 1) return applyTypes(x)
+  return map(applyTypes, x)
 }
 
-export const createTypes = R.compose(R.without(' '), R.split(/\s/))
+export const createTypes = compose(without(' '), split(/\s/))
 
 function applyTypes (x) {
   return {

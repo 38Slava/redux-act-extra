@@ -1,3 +1,5 @@
+var webpack = require('webpack')
+
 module.exports = {
  entry: './index.js',
  output: {
@@ -11,7 +13,10 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
-        presets: ['es2015', 'stage-0']
+        presets: ['es2015', 'stage-0'],
+        plugins: [
+          'transform-runtime'
+        ]
       }
     }
   ]
