@@ -1,15 +1,19 @@
 module.exports = {
  entry: './index.js',
  output: {
-   filename: 'dist/index.js'
+   path: './dist',
+   filename: 'index.js'
  },
  module: {
-   loaders: [
-     {
-       test: /\.js$/,
-       exclude: /node_modules/,
-       loader: 'babel-loader',
+  loaders: [
+    {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+      query: {
+        presets: ['es2015', 'stage-0']
       }
-   ]
- }
+    }
+  ]
+  }
 }
