@@ -2,7 +2,7 @@
   "name": "redux-act-extra",
   "version": "0.0.1",
   "description": "Helpers for redux-act",
-  "main": "dist/index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "dist": "webpack -p --config ./webpack.config.js"
   },
