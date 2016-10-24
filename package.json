@@ -2,9 +2,9 @@
   "name": "redux-act-extra",
   "version": "0.0.1",
   "description": "Helpers for redux-act",
-  "main": "dist/bundle.js",
+  "main": "index.js",
   "scripts": {
-    "dist": "webpack -p --config ./webpack.config.js"
+    "dist": "webpack --config ./webpack.config.js"
   },
   "repository": {
     "url": "git@github.com:38Slava/redux-act-extra.git",

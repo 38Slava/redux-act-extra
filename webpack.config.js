@@ -1,9 +1,8 @@
-var webpack = require('webpack')
-
 module.exports = {
  entry: './app.js',
  output: {
-   filename: 'index.js'
+   filename: 'index.js',
+   libraryTarget: 'umd'
  },
  module: {
   loaders: [
