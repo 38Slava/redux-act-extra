@@ -3,8 +3,7 @@ var webpack = require('webpack')
 module.exports = {
  entry: './app.js',
  output: {
-   path: './dist',
-   filename: 'bundle.js'
+   filename: 'index.js'
  },
  module: {
   loaders: [
