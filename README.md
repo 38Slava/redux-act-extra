@@ -4,9 +4,9 @@ Helpers for redux-act
 
 ## Installation
 
-`npm i redux-act-extra --save`
+`npm i 38Slava/redux-act-extra --save`
 or
-`yarn add redux-act-extra`
+`yarn add 38Slava/redux-act-extra`
 
 ## Usage
 
