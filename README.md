@@ -38,7 +38,7 @@ const Types = createTypes(`
   LOGIN
 `)
 
-export const [startup, login] = createActions(Types)
+export const [ startup, login ] = createActions(Types)
 ```
 ## History
 
