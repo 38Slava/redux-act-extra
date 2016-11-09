@@ -1,6 +1,6 @@
 {
   "name": "redux-act-extra",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Helpers for redux-act",
   "main": "index.js",
   "scripts": {

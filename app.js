@@ -8,11 +8,12 @@ import {
 } from 'ramda'
 
 export function createActions (x) {
-  if (length(x) === 1) return applyTypes(x)
-  return map(applyTypes, x)
+  const types = createTypes(x)
+  if (length(types) === 1) return applyTypes(types)
+  return map(applyTypes, types)
 }
 
-export const createTypes = compose(without(' '), split(/\s/))
+const createTypes = compose(without(' '), split(/\s/))
 
 function applyTypes (x) {
   return {
@@ -23,6 +24,5 @@ function applyTypes (x) {
 }
 
 export default {
-  createActions,
-  createTypes
+  createActions
 }

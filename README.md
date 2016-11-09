@@ -11,14 +11,12 @@ or
 ## Usage
 
 ```javascript
-import { createTypes, createActions } from 'redux-act-extra'
+import { createActions } from 'redux-act-extra'
 import { createReducer } from 'redux-act'
 
-const Types = createTypes(`
+export const startup = createActions(`
   STARTUP
 `)
-
-export const startup = createActions(Types)
 
 export default createReducer({
   [startup.request]: (state) => state,
@@ -33,12 +31,11 @@ export default createReducer({
 
 If you have multi types just use this syntax:
 ```javascript
-const Types = createTypes(`
+
+export const [ startup, login ] = createActions(`
   STARTUP
   LOGIN
 `)
-
-export const [ startup, login ] = createActions(Types)
 ```
 ## History
 

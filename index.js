@@ -59,7 +59,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.createTypes = undefined;
 	exports.createActions = createActions;
 
 	var _reduxAct = __webpack_require__(1);
@@ -67,11 +66,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _ramda = __webpack_require__(11);
 
 	function createActions(x) {
-	  if ((0, _ramda.length)(x) === 1) return applyTypes(x);
-	  return (0, _ramda.map)(applyTypes, x);
+	  var types = createTypes(x);
+	  if ((0, _ramda.length)(types) === 1) return applyTypes(types);
+	  return (0, _ramda.map)(applyTypes, types);
 	}
 
-	var createTypes = exports.createTypes = (0, _ramda.compose)((0, _ramda.without)(' '), (0, _ramda.split)(/\s/));
+	var createTypes = (0, _ramda.compose)((0, _ramda.without)(' '), (0, _ramda.split)(/\s/));
 
 	function applyTypes(x) {
 	  return {
@@ -82,8 +82,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	exports.default = {
-	  createActions: createActions,
-	  createTypes: createTypes
+	  createActions: createActions
 	};
 
 /***/ },
