@@ -14,7 +14,7 @@ or
 import { createActions } from 'redux-act-extra'
 import { createReducer } from 'redux-act'
 
-export const startup = createActions(`
+export const startp = createActions(`
   STARTUP
 `)
 
