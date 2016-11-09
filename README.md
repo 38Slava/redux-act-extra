@@ -19,11 +19,13 @@ export const startup = createActions(`
 `)
 
 export default createReducer({
-  [startup.request]: (state) => state,
-  [startup.success]: (state, payload) => {
+  [startup.request] (state) {
+    return state
+  },
+  [startup.success] (state, payload) {
     return payload
   },
-  [startup.failure]: (state, payload) => {
+  [startup.failure] (state, payload) {
     return payload
   }
 }, {})
